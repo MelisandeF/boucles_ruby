@@ -4,6 +4,7 @@ def define_password(user_password = gets.chomp)
 	@user_password = user_password
 
 end
+define_password
 
 #Vérifier le MDP
 
@@ -17,6 +18,5 @@ def password_verification(second_password = gets.chomp)
 
 end
 
-define_password
 password_verification
 
