@@ -23,9 +23,9 @@ puts bonjour('Sofia')
 puts "Hello what's your name?"
 name = gets.chomp
 
-def bonjour 
+def bonjour(name)
 	return "Bonjour #{name}"
 
 end
 
-puts "Bonjour #{name}"
+puts bonjour name
