@@ -1,4 +1,4 @@
-puts "Hey, please choose a number until 25"
+puts "Hey, please choose a number for the amazing pyramide"
 puts ">"
 
 nb = gets.chomp.to_i
@@ -6,7 +6,7 @@ nb = gets.chomp.to_i
 def pyramide(nb)
 
 nb.times do |i|
-	puts " "*(nb-(i+1))+"#"*(i+1)
+	puts " "*(nb-(i/2)-1)+"#"*(i+1)
 end
 end
 
