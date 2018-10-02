@@ -4,11 +4,12 @@ def define_password(user_password = gets.chomp)
 	@user_password = user_password
 
 end
+
 define_password
 
 #Vérifier le MDP
 
-puts "Et tappe le une seconde fois"
+puts "Merci de tapper le mot de passe une seconde fois"
 def password_verification(second_password = gets.chomp)
 	@second_password = second_password
 	if @user_password != @second_password
