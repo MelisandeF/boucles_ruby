@@ -25,7 +25,7 @@ puts "Donne moi la crypto qui a la plus grosse valeur"
 tab2 = Hash[*coins.zip(valo_c).flatten]
 
 puts a = valo_c.max
-puts b = tab2.key(46183.2)
+puts b = tab2.key(a)
 
 #Valo_c = 46183.2 and find the good crypto 
 #no working puts crypto[:$46183.2]
@@ -33,7 +33,7 @@ puts b = tab2.key(46183.2)
 puts "Donne moi la crypto qui a la plus petite valeur"
 
 puts c = valo_c.min 
-puts d = tab2.key(4.5e-07)
+puts d = tab2.key(c)
 
 puts "Combien de crypto contiennent le mot coin ?"
 
@@ -44,6 +44,7 @@ puts e = coins.count { |m| m=~ /coin/}
 #456 crypto contiennent le mot coin
 
 puts "Sors moi tout les devises, dont le cours est inférieur à 6000 (indice: pense bien à enlever le $ pour pouvoir faire une comparaison)"
+
 
 
 tab2.each do |key, value| 
@@ -57,13 +58,21 @@ end
 #La liste s'affiche dans la console 
 
 puts "Quel est le cours le plus haut parmi celle-la ?"
+ tab3 = []
 
+tab2.each do |key, value| 
+	if value <= 6000
+		tab3 << value
+	end
+end
 
-
+puts g = tab3.max
+#valeur 4
+puts f = tab2.key(g)
 
 puts "Lacrypto qui à la plus grosse valeur est #{b} avec une valeur de #{a}$"
-puts "La crypto qui à la plus petite valeur est #{d} avec une valeur de #{e}"
+puts "La crypto qui à la plus petite valeur est #{d} avec une valeur de #{c}$"
 puts "Le nombre de crypto contenant le mot coin est de #{e}"
 puts "La liste des devises des cours inférieur à 6 000 et leur valeur est affichée au dessus"
-puts "La plus haute devise parmis celle-ci est"
+puts "La plus haute devise parmis celle-ci est #{f} avec un valeur de #{g}$"
 
